@@ -13,7 +13,7 @@ pipeline {
             }
         }
 
-	stage ('Build Backend') {
+	stage ('Run Test') {
             
             environment {
                 mvnHOME = tool 'MAVEN_HOME'
