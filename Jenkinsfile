@@ -1,12 +1,17 @@
 pipeline {
-	agent any
-	stages {
-		stage ('Build Backend') {
-			steps {
-				def mvnHOME = tool 'MAVEN_HOME'
-				sh echo "${mvnHOME}"	
+    agent any
+    stages {
+        stage ('Inicio') {
+            
+            environment {
+                mvnHOME = tool 'MAVEN_HOME'
+            }
 
-			}
-		}	
-	}
+            steps {
+
+		sh  "${mvnHOME}/bin/mvn clean package -DskipTests=true"	
+            }
+        }
+
+    }
 }
