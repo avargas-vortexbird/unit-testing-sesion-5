@@ -3,7 +3,7 @@ pipeline {
 	stages {
 		stage ('Build Backend') {
 			steps {
-				def mvnHOME = tool name: 'MAVEN_HOME', type: 'maven'
+				def mvnHOME = tool 'MAVEN_HOME'
 				sh echo "${mvnHOME}"	
 
 			}
