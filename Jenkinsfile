@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage ('Inicio') {
+        stage ('Build Backend') {
             
             environment {
                 mvnHOME = tool 'MAVEN_HOME'
