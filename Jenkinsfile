@@ -47,11 +47,11 @@ pipeline {
             }	
                 }
         }*/
+    }
 
-        post {
-            junit allowEmptyResults: true, testsResults: 'target/surefire-reports/*.xml'	
+    post {
+        always{
+            junit allowEmptyResults: true, testResults: 'target/surefire-reports/*.xml'	
         }
-
-
     }
 }
